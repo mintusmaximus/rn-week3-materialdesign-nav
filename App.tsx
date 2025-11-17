@@ -5,8 +5,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./screens/HomeScreen";
 import SecondScreen from "./screens/SecondScreen";
 import Mybar from "./components/Mybar";
+import { RootStackParamList } from "./types/navigationTypes";
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (

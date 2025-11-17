@@ -1,13 +1,11 @@
 import { View, Text } from "react-native";
 import styles from "../style";
-import { useLayoutEffect } from "react";
+import { StackScreenProps } from "@react-navigation/stack";
+import { RootStackParamList } from "../types/navigationTypes";
 
-export default function HomeScreen({ navigation }) {
-  useLayoutEffect(() => {
-    console.log("rendered HomeScreen");
-    return () => {};
-  }, []);
+type Props = StackScreenProps<RootStackParamList, "Home">;
 
+export default function HomeScreen({ navigation }: Props) {
   return (
     <View style={styles.container}>
       <Text>Homescreen</Text>

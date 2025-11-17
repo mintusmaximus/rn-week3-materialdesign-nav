@@ -1,8 +1,14 @@
 import { Appbar } from "react-native-paper";
 import { getHeaderTitle } from "@react-navigation/elements";
 import * as React from "react";
+import { StackHeaderProps } from "@react-navigation/stack";
 
-export default function Mybar({ navigation, route, options, back }) {
+export default function Mybar({
+  navigation,
+  route,
+  options,
+  back,
+}: StackHeaderProps) {
   const title = getHeaderTitle(options, route.name);
 
   return (
